@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="mango">
+    <ion-title>Agregar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ion-content padding class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-button class="block" expand="full" color="dark" (click)="takePhoto()"><ion-icon name="camera"></ion-icon>&nbsp;Agregar foto</ion-button>
+      </ion-col>
+      <ion-col col-6>
+        <ion-button class="actionbutton" expand="full" color="dark" ><ion-icon name="image"></ion-icon>&nbsp;Desde Galeria</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<ion-grid>
+  <ion-row>
+    <ion-col size="6" *ngFor="let photo of photos; let id = index">
+      <ion-card class="block">
+        <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+        <img [src]="photo" *ngIf="photo" />
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "SmartDresser",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
